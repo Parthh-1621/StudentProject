@@ -1,6 +1,43 @@
 Follow these steps one by one in Git Bash for your `StudentProject` repository.
 
 ## Part 1: Configure username and email
+\
+bash
+```
+cd ~/StudentProject
+git config --global user.name "Parthh-1621"
+git config --global user.email "YOUR_GITHUB_EMAIL"
+git fetch origin
+git checkout feature
+echo "Name: Parth" > student.txt
+echo "Roll No: 1" >> student.txt
+git add student.txt
+git commit -m "Add student details"
+git fetch origin
+git pull --rebase origin feature
+git push -u origin feature
+git diff origin/main..origin/feature
+git diff --stat origin/main..origin/feature
+```
+
+bash
+```
+git checkout main
+git pull origin main
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Step 1: Set your GitHub username
 
