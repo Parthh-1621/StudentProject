@@ -1,0 +1,93 @@
+Follow these steps one by one in Git Bash for your `StudentProject` repository.
+
+## Part 1: Configure username and email
+
+### Step 1: Set your GitHub username
+
+Copy and paste:
+
+bash
+```
+git config --global user.name "Parthh-1621"
+```
+
+### Step 2: Set your email
+
+Replace the email below with the email associated with your GitHub account.
+
+bash
+```
+git config --global user.email "your-email@example.com"
+```
+
+### Step 3: Verify your details
+
+bash
+```
+git config --global --get user.name
+git config --global --get user.email
+```
+
+## Part 2: Push and compare branches
+
+### Step 4: Fetch the latest changes
+
+Make sure you are inside `~/StudentProject` and on the `feature` branch.
+
+bash
+```
+git fetch origin
+```
+
+### Step 5: Push the feature branch
+
+bash
+```
+git push -u origin feature
+```
+
+### Step 6: Compare `feature` with `main`
+
+bash
+```
+git diff origin/main..origin/feature
+```
+
+To see a summary of the changes:
+
+bash
+```
+git diff --stat origin/main..origin/feature
+```
+
+## Part 3: Create and merge the pull request
+
+### Step 7: Open your repository
+
+Go to [StudentProject on GitHub](<https://github.com/Parthh-1621/StudentProject>).
+
+### Step 8: Create the pull request
+
+1. Click Pull requests.
+2. Click New pull request.
+3. Set base to `main`.
+4. Set compare to `feature`.
+5. Click Create pull request.
+
+### Step 9: Merge the pull request
+
+1. Click Merge pull request.
+2. Click Confirm merge.
+
+## Part 4: Update your local main branch
+
+### Step 10: Run these commands in Git Bash
+
+bash
+```
+git checkout main
+git pull origin main
+git log -1 --oneline
+```
+
+Note: You do not need `gh pr create` because GitHub CLI is not installed on your computer. Creating and merging the pull request through the GitHub website works just as well.
