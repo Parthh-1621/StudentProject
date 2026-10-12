@@ -1,0 +1,96 @@
+Don't worry — fastest solution is to change your Git username/email and continue. You don't need to create another user or file.
+
+### Step 1: Copy-paste this in Git Bash
+
+Replace the email with your own GitHub email.
+
+bash
+```
+git config --global user.name "Parthh-1621"
+git config --global user.email "YOUR_GITHUB_EMAIL"
+git config user.name "Parthh-1621"
+git config user.email "YOUR_GITHUB_EMAIL"
+```
+
+### Step 2: Fix the latest commit author (if needed)
+
+bash
+```
+git commit --amend --reset-author --no-edit
+```
+
+### Step 3: Push your feature branch
+
+bash
+```
+git push -u origin feature
+```
+
+If Git rejects the push because the commit history changed, use:
+
+bash
+```
+git push --force-with-lease origin feature
+```
+
+### Step 4: Finish your assignment
+
+Open your [StudentProject repository](<https://github.com/Parthh-1621/StudentProject>) on GitHub.
+
+- Click Pull requests → New pull request.
+- Choose `main` as base and `feature` as compare.
+- Click Create pull request → Merge pull request → Confirm merge.
+
+### Important
+
+If Git says “Author identity unknown”, Step 1 should fix it. If it says “nothing to commit” in Step 2, skip that step and continue.
+
+You do not need to delete or recreate `student.txt`.
+
+
+
+
+Your GitHub `feature` branch has changes that your local branch doesn’t have. Fastest fix: fetch the latest branch, then push again.
+
+Copy and paste these commands one by one in Git Bash:
+
+### Step 1: Fetch the latest changes
+
+bash
+```
+git fetch origin
+```
+
+### Step 2: Integrate the remote feature branch
+
+bash
+```
+git pull --rebase origin feature
+```
+
+If a conflict appears, stop and send me the error message.
+
+### Step 3: Push your changes
+
+bash
+```
+git push -u origin feature
+```
+
+### Step 4: Compare branches
+
+bash
+```
+git diff origin/main..origin/feature
+```
+
+### Step 5: Create and merge your pull request
+
+Open [StudentProject on GitHub](<https://github.com/Parthh-1621/StudentProject>).
+
+1. Click Pull requests → New pull request.
+2. Set base to `main` and compare to `feature`.
+3. Click Create pull request.
+4. Click Merge pull request → Confirm merge.
+
+Important: Don't use `--force` again for now. Fetching and rebasing should preserve the remote work while integrating your changes.
